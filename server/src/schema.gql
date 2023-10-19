@@ -1,0 +1,20 @@
+type Blogs {
+  id: ID!
+  title: String!
+  content: String!
+  author: String!
+}
+
+type Query {
+  getBlogs(id: ID!): Blogs
+}
+
+input inputBlogsDetails {
+  title: String!
+  content: String!
+  author: String!
+}
+
+type Mutation {
+  createBlogs(input: inputBlogsDetails): Blogs!
+}
